@@ -5,3 +5,6 @@ $dbpassword="";
 $dbname="waterscada_wssp";
 
 $conn=mysqli_connect($hostname,$username,$dbpassword,$dbname);
+// if(conn){
+//     echo("Successful");
+// }
