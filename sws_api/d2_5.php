@@ -5,7 +5,7 @@ $device_id=$_POST['device_id'];
 
 
 //   $query="SELECT eid, round(avg(temp)) as temp,datetime FROM `devices_logs` where eid='$device_id' ORDER BY `devices_logs`.`datetime` DESC";
-$query="SELECT eid,round(AVG(D2_5)) as D2_5, date(datetime) from devices_logs where eid='$device_id' and substring_index(datetime, ' ', 1) = '2022-10-20' group by date(datetime)";
+$query="SELECT eid,round(AVG(D2_5)) as D2_5, date(datetime) from devices_logs where eid='$device_id' and date(datetime) = date(Now()) group by date(datetime)";
   $result=mysqli_query($conn,$query);
   $response=array();
   if($result){
