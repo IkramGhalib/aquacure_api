@@ -5,7 +5,11 @@ $device_id=$_POST['device_id'];
 
 
 //   $query="SELECT eid, round(avg(temp)) as temp,datetime FROM `devices_logs` where eid='$device_id' ORDER BY `devices_logs`.`datetime` DESC";
-$query="SELECT eid,round(AVG(temp)) as temp, date(datetime) from devices_logs where eid='$device_id' and date(datetime) = date(Now()) group by date(datetime)";
+// $query="SELECT eid,round(AVG(temp)) as temp, date(datetime) from devices_logs where eid='$device_id' and date(datetime) = date(Now()) group by date(datetime)";
+$query="SELECT eid,round(temp) as temp, date(datetime) from devices_logs where eid='$device_id' and date(datetime) >= curdate() - 7
+AND date(datetime) < curdate()LIMIT 7";
+
+
 
   $result=mysqli_query($conn,$query);
   $response=array();
