@@ -8,7 +8,7 @@ require_once 'opendb.php';
   $password=$_POST['password'];
   // select cidi,assgnee_name,billing_method from connections where cid = :username and password = :pass
  
-  $checkUser="SELECT * FROM connections WHERE cid='$cid'";
+  $checkUser="SELECT * FROM users WHERE userid='$cid'";
  
   $result=mysqli_query($conn,$checkUser);
  
@@ -16,7 +16,7 @@ require_once 'opendb.php';
  
   if(mysqli_num_rows($result)>0){ 
  
-    $checkUserquery="select cid,assignee_name,billing_method from connections where cid ='$cid' and password='$password'";
+    $checkUserquery="select userid, name,owner,occupant from users where userid ='$cid' and password='$password'";
     // echo $checkUserquery;
     $resultant=mysqli_query($conn,$checkUserquery);
  

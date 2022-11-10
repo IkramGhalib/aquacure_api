@@ -4,12 +4,10 @@
 require_once 'opendb.php';
 
 if($conn){
-    if($conn){
 
-    }
     $cid=$_POST['cid'];
     
-    $sql="SELECT * from connections where owner='$cid' or where occupant='$cid'";
+    $sql="SELECT * from connections where owner='$cid' or occupant='$cid'";
     $resc = $conn->query($sql) or die($conn->error);
     // $response=array();
     if(mysqli_num_rows($resc)>0){
