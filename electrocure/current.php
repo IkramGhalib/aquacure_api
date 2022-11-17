@@ -20,7 +20,7 @@ if(mysqli_num_rows($resc)>0){
        
         $response['error']="200";
         $response['message']="Data fetch Success";
-        $data[]=array('connection'=>$connection,'owner'=>$owner,'occupant'=>$occupant,'c1'=>$c1,'c2'=>$c2,'c3'=>$c3,'current'=>$current); 
+        $data=array('connection'=>$connection,'owner'=>$owner,'occupant'=>$occupant,'c1'=>$c1,'c2'=>$c2,'c3'=>$c3,'current'=>$current); 
 
     }
 }

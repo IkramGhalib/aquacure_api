@@ -32,7 +32,7 @@ if(mysqli_num_rows($resc)>0){
        
         $response['error']="200";
         $response['message']="Data fetch Success";
-        $data[]=array('connection'=>$connection,'owner'=>$owner,'occupant'=>$occupant,'kva1'=>$kva1,'kva2'=>$kva2,'kva3'=>$kva3,'totalKVA'=>$totalKVA); 
+        $data=array('connection'=>$connection,'owner'=>$owner,'occupant'=>$occupant,'kva1'=>$kva1,'kva2'=>$kva2,'kva3'=>$kva3,'totalKVA'=>$totalKVA); 
 
     }
 }

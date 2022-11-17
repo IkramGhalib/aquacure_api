@@ -32,7 +32,7 @@ if(mysqli_num_rows($resc)>0){
        
         $response['error']="200";
         $response['message']="Data fetch Success";
-        $data[]=array('connection'=>$connection,'owner'=>$owner,'occupant'=>$occupant,'kva1'=>$kva1,'kva2'=>$kva2,'kva3'=>$kva3,'totalKVA'=>$totalKVA,'c1'=>$c1,'c2'=>$c2,'c3'=>$c3,'current'=>$current,'v1'=>$v1,'v2'=>$v2,'v3'=>$v3,'avg_voltage'=>$voltage); 
+        $data=array('connection'=>$connection,'owner'=>$owner,'occupant'=>$occupant,'kva1'=>$kva1,'kva2'=>$kva2,'kva3'=>$kva3,'totalKVA'=>$totalKVA,'c1'=>$c1,'c2'=>$c2,'c3'=>$c3,'current'=>$current,'v1'=>$v1,'v2'=>$v2,'v3'=>$v3,'avg_voltage'=>$voltage); 
 
     }
 }
